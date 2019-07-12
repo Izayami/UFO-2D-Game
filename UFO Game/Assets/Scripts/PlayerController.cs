@@ -32,6 +32,11 @@ public class PlayerController : MonoBehaviour {
         Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 
         rb2d.AddForce (movement * speed);
+        
+        if (Input.GetKey("escape"))
+     Application.Quit();
+
+       
     }
 
     void OnTriggerEnter2D(Collider2D other) 
